@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Tracker</title>
+</head>
+<body>
+    <h1>Job Applications</h1>
+    <a href="/add">Add Job</a>
+    <ul>
+        {% for job in jobs %}
+            <li>{{ job["company"] }} - {{ job["position"] }} ({{ job["status"] }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
